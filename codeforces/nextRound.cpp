@@ -13,10 +13,10 @@ int main(){
     i=0;
     int counter=0;
       while(i<no_of_participations){
-        if(a[i]>=a[position_to_check]){
+        if(a[i]>=a[position_to_check-1]){
             counter++;
         }
-        if(a[i]==0){
+        if(a[i]==0&&a[position_to_check-1]==0){
             counter--;
         }
         i++;
