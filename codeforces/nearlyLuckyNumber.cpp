@@ -29,10 +29,10 @@
     int main(){
         long long n;
         cin>>n;
-        // long long no_of_lucky_number = lucky_number_counter(n);
-        cout<<no_of_lucky_number<<" ";
-        // long long nearly_lucky=lucky(no_of_lucky_number);
-        cout<<nearly_lucky;
+        long long no_of_lucky_number = lucky_number_counter(n);
+        // cout<<no_of_lucky_number<<" ";
+        long long nearly_lucky=lucky(no_of_lucky_number);
+        // cout<<nearly_lucky;
         if(nearly_lucky){
             cout<<"YES";
         }
