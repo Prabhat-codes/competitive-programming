@@ -7,14 +7,18 @@ int main(){
     int i=0;
     int final[n]={0};
     int a[n],b[n];
-    while(i<n){
+    int p,q;
+    cin>>p;
+    
+    while(i<p){
         cin>>a[i];
         
         final[a[i]-1]=1;
         i++;
     }
     i=0;
-    while(i<n){
+    cin>>q;
+    while(i<q){
         cin>>b[i];
         
         final[b[i]-1]=1;
