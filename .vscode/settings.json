@@ -5,7 +5,8 @@
         "ostream": "cpp",
         "chrono": "cpp",
         "complex": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "*.tcc": "cpp"
     }
     
 }
