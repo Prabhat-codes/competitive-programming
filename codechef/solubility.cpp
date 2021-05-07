@@ -6,6 +6,6 @@ int main(){
     while(t--){
         int a,b,c;
         cin>>a>>b>>c;
-        cout<<(b+(100-a)*c)<<endl;
+        cout<<(b+(100-a)*c)*10<<endl;
     }
 }
