@@ -13,10 +13,7 @@ int main()
             j--;
         }
         arr[j+1]=key;
-        for(int i=0;i<5;i++){
-            cout<<arr[i]<<" ";
-        }
-        cout<<endl;
+        
     }
     for(int i=0;i<5;i++){
         cout<<arr[i]<<" ";
