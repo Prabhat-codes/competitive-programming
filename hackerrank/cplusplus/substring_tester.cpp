@@ -1,56 +1,41 @@
+// Prints every substring that starts with one given letter and ends with another,
+// followed by how many there are. Input: the number of tests, then for each test
+// a word and the two letters.
 #include<bits/stdc++.h>
 using namespace std;
- 
-// Function to print all sub strings
-void subString(char str[], int n,star,en)
-{   int flag=0;
+
+// Function to print the matching sub strings
+void subString(const string &str, char star, char en)
+{
+    int n=str.length();
     int number_of_substrings=0;
-    // Pick starting point
+    // Pick the length
     for (int len = 1; len <= n; len++)
-    {   
-        // Pick ending point
+    {
+        // Pick starting point
         for (int i = 0; i <= n - len; i++)
         {
-            //  Print characters from current
-            // starting point to current ending
-            // point. 
-            int j = i + len - 1;           
-            for (int k = i; k <= j; k++){
-                if(k==i){
-                    if(str[k]==star){
-                        flag++;
-                    }
-                }
-                if(k==j){
-                    if(str[k]==en){
-                        flag++;
-                    }
-                }
-                
-                cout << str[k];
+            int j = i + len - 1;
+            if(str[i]==star && str[j]==en){
+                cout << str.substr(i,len) << endl;
+                number_of_substrings++;
             }
-            if(flag==)
-             
-            cout << endl;
         }
     }
+    cout << number_of_substrings << endl;
 }
- 
+
 // Driver program to test above function
 int main()
-{   
+{
     int t;
     cin>>t;
     while(t--){
         string c;
         cin>>c;
         char start,end;
-        cin>>start,end;
-        int n=c.length();
-        char str[n+1];
-        std::strcpy(str,c.c_str());
-        subString(str, strlen(str),start,end);
-    
+        cin>>start>>end;
+        subString(c,start,end);
     }
     return 0;
 }

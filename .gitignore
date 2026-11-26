@@ -1,0 +1,7 @@
+# compiled programs: on Linux and macOS they have no extension
+*
+!*/
+!*.*
+*.exe
+*.o
+*.out

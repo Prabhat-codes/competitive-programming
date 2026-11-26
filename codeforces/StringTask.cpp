@@ -1,3 +1,5 @@
+// Codeforces 118A, String Task: drop the vowels, and put a "." before each
+// consonant, all in lower case.
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -5,18 +7,16 @@ int main()
     {
         string b,c;
         cin>>b;
-        int j=0;
-        for(int i=0;i<b.length();i++)
+        string vowels="aeiouy";
+        for(int i=0;i<(int)b.length();i++)
         {
-            if(b[i]=='a'||b[i]=='e'||b[i]=='i'||b[i]=='o'||b[i]=='u'){
+            char letter=tolower(b[i]);
+            if(vowels.find(letter)!=string::npos){
                 continue;
             }
-            else{
-                cout<<"HELLO";
-                c.append('.');
-                c.append(str(b[i]));
-            }
+            c+='.';
+            c+=letter;
         }
-        cout<<c;
+        cout<<c<<endl;
         return 0;
     }

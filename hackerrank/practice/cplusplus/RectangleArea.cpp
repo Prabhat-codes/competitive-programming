@@ -1,3 +1,6 @@
+// HackerRank, Rectangle Area. Input: width and height.
+#include <iostream>
+using namespace std;
 
 /*
  * Create classes Rectangle and RectangleArea
@@ -19,4 +22,11 @@ class RectangleArea : public Rectangle{
         cout<<width*height<<endl;
     }
 };
-    
+
+int main(){
+    RectangleArea r;
+    r.read_input();
+    r.Rectangle::display();  // the size
+    r.display();             // the area
+    return 0;
+}

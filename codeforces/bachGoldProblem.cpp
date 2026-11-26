@@ -1,24 +1,16 @@
+// Codeforces 749A, Bachgold Problem: write n as a sum of as many primes as possible.
+// Using only 2s gives the most terms; an odd n needs one 3 instead.
 #include<bits/stdc++.h>
 using namespace std;
-bool isPrime(int n)
-{
-    // Corner case
-    if (n <= 1)
-        return false;
-  
-    // Check from 2 to n-1
-    for (int i = 2; i < n; i++)
-        if (n % i == 0)
-            return false;
-  
-    return true;
-}
+
 int main(){
     int n;
     cin>>n;
-    int sum=0;
-    while(n--){
-        if(isPrime(n)){
-            sum=sum+n;
-        }
+    cout<<n/2<<endl;
+    while(n>3){
+        cout<<2<<" ";
+        n-=2;
     }
+    cout<<n<<endl;
+    return 0;
+}

@@ -1,3 +1,7 @@
+// HackerRank, Box It!: a class with constructors and overloaded operators.
+// Input: the number of queries, then one query per line (types 1 to 5).
+#include <iostream>
+using namespace std;
 
 //Implement the class Box  
 //l,b,h are integers representing the dimensions of the box
@@ -63,3 +67,30 @@ class Box{
 //Overload operator << as specified
 //ostream& operator<<(ostream& out, Box& B)
 
+int main(){
+    int n,type;
+    cin>>n;
+    Box box;
+    while(n--){
+        cin>>type;
+        if(type==1){            // show the box
+            cout<<box<<endl;
+        } else if(type==2){     // replace the box
+            int l,b,h;
+            cin>>l>>b>>h;
+            box=Box(l,b,h);
+            cout<<box<<endl;
+        } else if(type==3){     // compare a new box with it
+            int l,b,h;
+            cin>>l>>b>>h;
+            Box other(l,b,h);
+            cout<<(other<box ? "Lesser" : "Greater")<<endl;
+        } else if(type==4){     // volume
+            cout<<box.CalculateVolume()<<endl;
+        } else if(type==5){     // copy it
+            Box copy(box);
+            cout<<copy<<endl;
+        }
+    }
+    return 0;
+}
